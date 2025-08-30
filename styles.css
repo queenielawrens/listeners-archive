@@ -1,0 +1,56 @@
+/** @format */
+
+@charset "UTF-8";
+
+/* Hex Transparency Guide: https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4 */
+
+:root {
+  --window-width: min(max(95vw, 320px), 800px);
+  --window-height: calc(var(--window-width) * 0.8);
+  --header-height: calc(var(--window-height) * 0.15);
+  --team-width: calc(var(--window-width) * 0.435);
+  --button-border: calc(var(--window-width) * 0.004);
+  --outline-width: calc(var(--window-width) * 0.006);
+  --button-height: calc(var(--window-height) * 0.07);
+  --player-width: calc((var(--team-width) - (var(--window-width) * 0.025)) / 4);
+  --button-bottom-margin: calc(var(--window-height) * 0.051);
+  --side-padding: calc(var(--window-width) * 0.04);
+  --screen-select-color: #c8c4c4;
+  --screen-wager-color: #686c9c;
+  --screen-crowned-color: #b85c64;
+  --dark-gray: #8c8c9b;
+  --light-gray: #bbbbcb;
+  --whiteish: #ededff;
+  --back-blue-1: hsl(230.61, 90.54%, 24.79%);
+  --back-blue-2: hsl(231.43, 88.73%, 13.92%);
+}
+
+#blur {
+  position: fixed;
+  top: -10vw;
+  left: -10vw;
+  height: 150vh;
+  width: 110vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#blur div {
+  height: 155vh;
+  width: 115vw;
+  background: repeating-linear-gradient(
+    to top right,
+    var(--back-blue-1) 0,
+    var(--back-blue-2) calc(var(--window-width) / 4),
+    var(--back-blue-1) calc(var(--window-width) / 2)
+  );
+  filter: blur(8px);
+}
+
+#window {
+  position: relative;
+  width: var(--window-width);
+  height: var(--window-height);
+  display: block;
+  margin: min(max(calc((100vh - var(--window-height)) / 2), 1.5vh), 6vh) auto;
+}
