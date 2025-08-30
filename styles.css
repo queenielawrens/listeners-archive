@@ -21,8 +21,8 @@
   --dark-gray: #8c8c9b;
   --light-gray: #bbbbcb;
   --whiteish: #ededff;
-  --back-blue-1: hsl(230.61, 90.54%, 24.79%);
-  --back-blue-2: hsl(231.43, 88.73%, 13.92%);
+  --back-blue-1: #072017;
+  --back-blue-2: #2d4b1d;
 }
 
 #blur {
