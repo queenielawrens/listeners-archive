@@ -21,8 +21,8 @@
   --dark-gray: #8c8c9b;
   --light-gray: #bbbbcb;
   --whiteish: #ededff;
-  --back-blue-1: #072017;
-  --back-blue-2: #2d4b1d;
+  --back-color-1: #072017;
+  --back-color-2: #2d4b1d;
 }
 
 #blur {
@@ -40,9 +40,9 @@
   width: 115vw;
   background: repeating-linear-gradient(
     to top right,
-    var(--back-blue-1) 0,
-    var(--back-blue-2) calc(var(--window-width) / 4),
-    var(--back-blue-1) calc(var(--window-width) / 2)
+    var(--back-color-1) 0,
+    var(--back-color-2) calc(var(--window-width) / 4),
+    var(--back-color-1) calc(var(--window-width) / 2)
   );
   filter: blur(8px);
 }
