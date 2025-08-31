@@ -39,10 +39,10 @@
   height: 155vh;
   width: 115vw;
   background: repeating-linear-gradient(
-    to top right,
+    55deg,
     var(--back-color-1) 0,
-    var(--back-color-2) calc(var(--window-width) / 4),
-    var(--back-color-1) calc(var(--window-width) / 2)
+    var(--back-color-2) 200px,
+    var(--back-color-1) 400px
   );
   filter: blur(8px);
 }
