@@ -44,7 +44,7 @@
     var(--back-color-2) 200px,
     var(--back-color-1) 400px
   );
-  filter: blur(8px);
+  filter: blur(36px);
 }
 
 #window {
