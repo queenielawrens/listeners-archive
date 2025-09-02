@@ -21,21 +21,40 @@
   --dark-gray: #8c8c9b;
   --light-gray: #bbbbcb;
   --whiteish: #ededff;
-  --back-color-1: #072017;
-  --back-color-2: #2d4b1d;
+  --back-color-1: #051911;
+  --back-color-2: #16250e;
 }
 
-#blur {
+* {
+  font-family: 'Libre Baskerville', 'EB Garamond', serif;
+  cursor: inherit;
+  transition: outline 0.5s linear;
+  outline: transparent solid 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 0;
+  /*cursor: var(--cursor);*/
+}
+
+/*a {
+  cursor: var(--cursor-pointer);
+}*/
+
+#background {
   position: fixed;
   top: -10vw;
   left: -10vw;
   height: 150vh;
   width: 110vw;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 
-#blur div {
+#background #blur{
+  position: absolute;
   height: 155vh;
   width: 115vw;
   background: repeating-linear-gradient(
@@ -47,10 +66,22 @@
   filter: blur(36px);
 }
 
+#background #eyeHolder {
+  height: 155vh;
+  width: 115vw;
+  position: absolute;
+  background-image: url("assets/FTL_EYE_tile.png");
+  background-repeat: repeat;
+  background-size: 160px;
+  z-index: 1;
+  opacity: 0.6;
+}
+
 #window {
   position: relative;
   width: var(--window-width);
   height: var(--window-height);
   display: block;
   margin: min(max(calc((100vh - var(--window-height)) / 2), 1.5vh), 6vh) auto;
+  z-index: 2;
 }
